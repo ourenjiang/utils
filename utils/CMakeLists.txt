@@ -10,13 +10,13 @@ cpphttplib_splitout/httplib.cc
 SyncRequest.cpp
 SyncRespond.cpp
 BoostTimer.cpp
-Crc16.cpp
 Datetime.cpp
 Endian.cpp
 Cgi.cpp
-ModbusRtu.cpp
 JsonWrapper.cpp
 StreamWrapper.cpp
+modbus/Crc16.cpp
+modbus/ModbusRtu.cpp
 )
 
 add_library(utils ${utils_SRCS})
