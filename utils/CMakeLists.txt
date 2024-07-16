@@ -11,12 +11,12 @@ SyncRequest.cpp
 SyncRespond.cpp
 BoostTimer.cpp
 Datetime.cpp
-Endian.cpp
 Cgi.cpp
 JsonWrapper.cpp
 StreamWrapper.cpp
 modbus/Crc16.cpp
 modbus/ModbusRtu.cpp
+modbus/Endian.cpp
 )
 
 add_library(utils ${utils_SRCS})

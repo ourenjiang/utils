@@ -3,6 +3,8 @@
 #include <vector>
 #include <stdint.h>
 
+namespace modbus
+{
 namespace endian
 {
 using namespace std;
@@ -11,4 +13,5 @@ using namespace std;
 void reverse(void *data, int len);
 void reverseByteArray(void *arr, const unsigned long len);
 
-}////namespace endian
+}//namespace endian
+}//namespace modbus
