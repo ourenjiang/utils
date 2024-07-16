@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${env:HOME}/third_party/boost-1.84.0/include",
+                "${env:HOME}/third_party/cppzmq-4.10.0/include",
+                "${env:HOME}/third_party/hiredis-1.2.0/include",
+                "${env:HOME}/third_party/jsoncpp-1.9.5/include",
+                "${env:HOME}/third_party/libmodbus-3.1.10/include",
+                "${env:HOME}/third_party/libzmq-4.3.5/include",
+                "${env:HOME}/third_party/log4cpp-1.1.3/include",
+                "${env:HOME}/third_party/msgpack-c-cpp-6.1.0/include",
+                "${env:HOME}/third_party/redis-plus-plus-1.3.11/include",
+                "${env:HOME}/third_party/sqlite_modern_cpp-3.2/include",
+                "${env:HOME}/third_party/sqlite-3.39.4/include",
+                "${env:HOME}/third_party/yaml-cpp-0.8.0/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
