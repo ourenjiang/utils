@@ -16,7 +16,7 @@ using namespace std;
 using namespace std::chrono;
 
 /**
- * @brief 
+ * @brief 分割网络地址
  * @param address IPV4网络地址字符串，格式：IP地址:端口号，比如 127.0.0.1:8000
  * @return 可选类型
  * --{ip, port}

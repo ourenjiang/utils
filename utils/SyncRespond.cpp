@@ -1,6 +1,7 @@
 #include "SyncRespond.h"
+#include <iostream>
 
-using namespace ems;
+using namespace utils;
 using namespace boost::asio;
 
 SyncRespond::SyncRespond(const string port, function< vector<uint8_t> (const vector<uint8_t>&)> matchCallback)

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <sstream>
 
-using namespace ems;
+using namespace utils;
 
 /**
  * 仅在main()处调用一次

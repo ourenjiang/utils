@@ -1,12 +1,11 @@
 #pragma once
-#include <iostream>
-#include "boost/asio.hpp"
 #include <thread>
-#include "boost/bind/bind.hpp"
 #include <functional>
 #include <map>
+#include "boost/asio.hpp"
+#include "boost/bind/bind.hpp"
 
-namespace ems
+namespace utils
 {
 using namespace std;
 using namespace boost::asio;
@@ -40,4 +39,4 @@ private:
     std::thread ioContextThread_;
 };
 
-}//namespace ems
+}//namespace utils

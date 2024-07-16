@@ -1,8 +1,6 @@
 #pragma once
 #include <string>
 
-namespace ems
-{
 namespace utils
 {
 
@@ -12,4 +10,3 @@ void configurationInitFromEnv();
 void logInit();
 
 }//namespace utils
-}//namespace ems

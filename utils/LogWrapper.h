@@ -11,17 +11,16 @@
 #include <memory>
 #include <mutex>
 
-namespace ems
+namespace utils
 {
 using namespace std;
 using namespace log4cpp;
 using LogAttr = tuple<string,  // 日志名称
                       string>; // 级别
 
-class Log4cppWrapper
+class LogWrapper
 {
 public:
-    Log4cppWrapper() = delete;
     static void init(vector<LogAttr> _list, const string& path);
     static Category& getLogger(const size_t index);
 private:

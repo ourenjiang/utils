@@ -1,13 +1,14 @@
 #include "ResourceInit.h"
 #include "utils/CommandlineParams.h"
-#include "utils/YamlcppWrapper.h"
-#include "utils/Log4cppWrapper.h"
+#include "utils/YamlWrapper.hpp"
+#include "utils/LogWrapper.h"
 #include "boost/assert.hpp"
 #include <iostream>
 
-using namespace ems::utils;
+using namespace std;
+using namespace utils;
 
-void ems::utils::commandlineParamsInit(int argc, char **argv)
+void utils::commandlineParamsInit(int argc, char **argv)
 {
     CommandlineParams::init(argc, argv);
     auto& variablesMap = CommandlineParams::getVariablesMap();
@@ -18,16 +19,16 @@ void ems::utils::commandlineParamsInit(int argc, char **argv)
     }
 }
 
-void ems::utils::configurationInit()
+void utils::configurationInit()
 {
     auto& variablesMap = CommandlineParams::getVariablesMap();
     auto result = variablesMap.find("configure");
     BOOST_ASSERT(result != variablesMap.end());
     const string cfgPath = result->second.as<string>();
-    YamlcppWrapper::init(cfgPath + "/config.yaml");
+    yaml_wrapper::YamlWrapper::load(cfgPath + "/config.yaml");
 }
 
-void ems::utils::configurationInitFromEnv()
+void utils::configurationInitFromEnv()
 {
 try
 {
@@ -38,7 +39,7 @@ try
     }
     string filename(envValue);
     filename += "/etc/config.yaml";
-    YamlcppWrapper::init(filename);
+    yaml_wrapper::YamlWrapper::load(filename);
 }
 catch(const std::exception& e){
     std::cerr << e.what() << '\n';
@@ -46,9 +47,9 @@ catch(const std::exception& e){
 }
 }
 
-void ems::utils::logInit()
+void utils::logInit()
 {
-    auto& cfgRoot = YamlcppWrapper::getRoot();
+    auto& cfgRoot = yaml_wrapper::YamlWrapper::getRoot();
     const auto& logCfg = cfgRoot["logger"];
     vector<LogAttr> logAttrs;
     std::transform(logCfg.begin(), logCfg.end(), back_inserter(logAttrs), 
@@ -60,5 +61,5 @@ void ems::utils::logInit()
     });
     const string rootPath = cfgRoot["global"]["rootPath"].as<string>();
     const string logPath = cfgRoot["global"]["logPath"].as<string>();
-    Log4cppWrapper::init(logAttrs, rootPath + logPath);
+    LogWrapper::init(logAttrs, rootPath + logPath);
 }

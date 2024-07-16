@@ -1,9 +1,9 @@
-#include "Log4cppWrapper.h"
+#include "LogWrapper.h"
 #include "boost/assert.hpp"
 
-using namespace ems;
+using namespace utils;
 
-void Log4cppWrapper::init(vector<LogAttr> _list, const string& path)
+void LogWrapper::init(vector<LogAttr> _list, const string& path)
 {
     std::lock_guard<mutex> lock(mtx_);
     path_ = path;// 日志文件路径
@@ -13,7 +13,7 @@ void Log4cppWrapper::init(vector<LogAttr> _list, const string& path)
     }
 }
 
-Category& Log4cppWrapper::init(const LogAttr& attr)
+Category& LogWrapper::init(const LogAttr& attr)
 {
     auto logName = std::get<0>(attr);// 日志名称
 
@@ -46,7 +46,7 @@ Category& Log4cppWrapper::init(const LogAttr& attr)
     return logInstance;
 }
 
-Category& Log4cppWrapper::getLogger(const size_t index)
+Category& LogWrapper::getLogger(const size_t index)
 {
     BOOST_ASSERT(index < loggers_.size());
     // return loggers_.at(id);// 下标不行，at()可以?
