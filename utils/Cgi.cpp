@@ -1,4 +1,4 @@
-#include "cgi.h"
+#include "Cgi.h"
 
 using namespace std;
 

@@ -1,7 +1,7 @@
 #include "BoostTimer.h"
 
 using namespace std;
-using namespace ems;
+using namespace utils;
 using namespace boost;
 
 BoostTimer::BoostTimer(const int64_t timeoutMs)

@@ -1,4 +1,4 @@
-#include "crc16.h"
+#include "Crc16.h"
 
 uint16_t modbus::crc16_manual(const uint8_t *buffer, uint16_t buffer_length)
 {

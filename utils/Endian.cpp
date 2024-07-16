@@ -1,4 +1,4 @@
-#include "endian.h"
+#include "Endian.h"
 #include <algorithm>
 
 void endian::reverse(void *data, int len)

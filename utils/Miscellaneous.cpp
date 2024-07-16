@@ -1,9 +1,7 @@
 #include "Miscellaneous.h"
 #include <regex>
-// #include <unistd.h>
 #include "boost/assert.hpp"
 #include "utils/MsgpackWrapper.hpp"
-#include "crc16.h"
 
 using namespace std;
 

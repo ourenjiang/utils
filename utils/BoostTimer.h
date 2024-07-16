@@ -2,7 +2,7 @@
 #include "boost/asio.hpp"
 #include "boost/assert.hpp"
 
-namespace ems
+namespace utils
 {
 using namespace std;
 using namespace boost::asio;

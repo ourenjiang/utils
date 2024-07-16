@@ -1,6 +1,6 @@
 #include "ModbusRtu.h"
-#include <cstring>
-#include "crc16.h"
+#include <string.h>
+#include "Crc16.h"
 
 using namespace std;
 

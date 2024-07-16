@@ -1,12 +1,12 @@
 #include "HttpWrapper.h"
 
-httplib::Server& ems::utils::getHttpServerSingleton()
+httplib::Server& http_wrapper::getServerSingleton()
 {
     static httplib::Server instance;
     return instance;
 }
 
-void ems::utils::httpRespond(Response &respond, const Json::Value data)
+void http_wrapper::respond(Response &respond, const Json::Value data)
 {
     // 3, 响应数据
     Json::StreamWriterBuilder builder;

@@ -15,11 +15,7 @@ public:
 
 int main()
 {
-    // ems::BoostTimer timer([](){
-    //     cout << "boost timer..." << endl;
-    // }, 1000);
-
     MyTest test;
-    ems::BoostTimer timer(std::bind(&MyTest::run, &test, 1), 1000);
+    utils::BoostTimer timer(std::bind(&MyTest::run, &test, 1), 1000);
     timer.start();
 }

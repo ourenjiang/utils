@@ -3,7 +3,7 @@
 #include <string>
 #include <initializer_list>
 
-namespace ems
+namespace utils
 {
 using namespace std;
 
@@ -25,4 +25,4 @@ private:
     inline static EnvironmentMap environmentMap_;
 };
 
-}//namespace ems
+}//namespace utils

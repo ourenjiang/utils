@@ -3,19 +3,19 @@ ResourceInit.cpp
 LogWrapper.cpp
 CommandlineParams.cpp
 EnvironmentVariables.cpp
-zeromq.cpp
+Zeromq.cpp
 Miscellaneous.cpp
 HttpWrapper.cpp
 cpphttplib_splitout/httplib.cc
 SyncRequest.cpp
 SyncRespond.cpp
 BoostTimer.cpp
-crc16.cpp
-datetime.cpp
-endian.cpp
-cgi.cpp
+Crc16.cpp
+Datetime.cpp
+Endian.cpp
+Cgi.cpp
 ModbusRtu.cpp
-jsonWrapper.cpp
+JsonWrapper.cpp
 StreamWrapper.cpp
 )
 

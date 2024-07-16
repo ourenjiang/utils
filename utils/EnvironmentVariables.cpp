@@ -2,7 +2,7 @@
 #include <algorithm>
 #include "boost/assert.hpp"
 
-using namespace ems;
+using namespace utils;
 
 void EnvironmentVariables::init(initializer_list<string> _list)
 {

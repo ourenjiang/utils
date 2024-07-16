@@ -2,9 +2,7 @@
 #include <assert.h>
 #include <unistd.h>
 
-namespace ems
-{
-namespace miscellaneous
+namespace utils
 {
 using namespace std;
 
@@ -18,5 +16,4 @@ public:
     }
 };
 
-}////namespace miscellaneous
-}//namespace ems
+}//namespace utils

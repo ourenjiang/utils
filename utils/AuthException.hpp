@@ -2,7 +2,7 @@
 #include <stdexcept>
 #include <string>
 
-namespace ems
+namespace utils
 {
 using namespace std;
 
@@ -12,11 +12,9 @@ public:
     AuthException(const std::string& msg, const std::string& username) 
         : std::runtime_error(msg), username_(username) {}
     
-    // const char* what() const noexcept override {
-    //     return extraInfo.c_str();
-    // }
     string username() const { return username_; }
 private:
      string username_;
 };
-}
+
+}//namespace utils
