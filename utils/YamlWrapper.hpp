@@ -1,11 +1,11 @@
 #pragma once
 #include "yaml-cpp/yaml.h"
 
-namespace yaml_wrapper
+namespace yaml
 {
 using namespace std;
 
-class YamlWrapper
+class Wrapper
 {
 public:
 
@@ -33,4 +33,4 @@ private:
     inline static YAML::Node root_;
 };
 
-}//namespace yaml_wrapper
+}//namespace yaml
