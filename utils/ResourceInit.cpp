@@ -25,7 +25,7 @@ void utils::configurationInit()
     auto result = variablesMap.find("configure");
     BOOST_ASSERT(result != variablesMap.end());
     const string cfgPath = result->second.as<string>();
-    yaml_wrapper::YamlWrapper::load(cfgPath + "/config.yaml");
+    yaml::Wrapper::load(cfgPath + "/config.yaml");
 }
 
 void utils::configurationInitFromEnv()
@@ -39,7 +39,7 @@ try
     }
     string filename(envValue);
     filename += "/etc/config.yaml";
-    yaml_wrapper::YamlWrapper::load(filename);
+    yaml::Wrapper::load(filename);
 }
 catch(const std::exception& e){
     std::cerr << e.what() << '\n';
@@ -49,7 +49,7 @@ catch(const std::exception& e){
 
 void utils::logInit()
 {
-    auto& cfgRoot = yaml_wrapper::YamlWrapper::getRoot();
+    auto& cfgRoot = yaml::Wrapper::getRoot();
     const auto& logCfg = cfgRoot["logger"];
     vector<LogAttr> logAttrs;
     std::transform(logCfg.begin(), logCfg.end(), back_inserter(logAttrs), 

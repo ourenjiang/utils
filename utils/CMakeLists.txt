@@ -17,6 +17,7 @@ StreamWrapper.cpp
 modbus/Crc16.cpp
 modbus/ModbusRtu.cpp
 modbus/Endian.cpp
+backtrace.cpp
 )
 
 add_library(utils ${utils_SRCS})

@@ -32,3 +32,9 @@ add_executable(syncRespondTest SyncRespondTest.cpp)
 target_link_libraries(syncRespondTest
 PRIVATE utils
 )
+
+####################################################
+add_executable(backtraceTest BacktraceTest.cpp)
+target_link_libraries(backtraceTest
+PRIVATE utils
+)
