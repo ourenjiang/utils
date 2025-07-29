@@ -5,7 +5,6 @@
 #include <sys/time.h>
 #include <time.h>
 #include <chrono>
-#include "json/json.h"
 #include <optional>
 #include "zmq.hpp"
 #include <regex>

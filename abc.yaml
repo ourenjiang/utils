@@ -1,0 +1,4 @@
+global: {language: Zh}
+tem: {enable: true, mode: temPeak, heatTem: 2.5, coolTem: 45.0, heatLevel: level1, coolLevel: level1}
+protocol: {enable: true, id: 00001.00001.00001, broker-address: 192.168.10.128, publish-interval: 1000, username: jack, password: 123456}
+

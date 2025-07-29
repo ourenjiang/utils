@@ -8,10 +8,6 @@ using namespace std;
 // 校验系统时间字符串
 bool matchTimeHHMM(const string& timestr);
 
-// 字符串转换字节流
-vector<byte> toBytes(const string& data);
-vector<byte> toBytes(const void* data, size_t len);
-
 // 创建字符串
 string toString(const void* data, size_t len);
 

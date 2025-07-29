@@ -1,0 +1,37 @@
+global:
+{
+  language: Zh  # Zh | En
+}
+
+tem:
+{
+  enable: true,
+
+  # 单体温度极值 temPeak | BAU告警等级 warningLevel
+  mode: temPeak,
+
+  # 启动制热的单体温度极小值
+  heatTem: 2.5, 
+
+  # 启动制冷的单体温度极大值
+  coolTem: 45.0, 
+
+  # 启动制热的低温告警等级， 有效值：一级 level1 | 二级 level2
+  heatLevel: level1,
+  
+  # 启动制冷的高温告警等级 有效值：一级 level1 | 二级 level2
+  coolLevel: level1,
+}
+
+protocol:
+{
+  enable: true,
+  
+  id: 00001.00001.00001,
+  broker-address: 192.168.10.128,
+  publish-interval: 1000,
+  username: jack,
+  password: 123456
+}
+
+## 注意，yaml-cpp文件末尾必须要保留空行，否则解析时会失败！！！

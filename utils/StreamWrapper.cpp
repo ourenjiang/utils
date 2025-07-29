@@ -10,18 +10,6 @@ bool stream_wrapper::matchTimeHHMM(const string& timestr)
     return regex_match(timestr, timeRegex);
 }
 
-vector<byte> stream_wrapper::toBytes(const string& data)
-{
-    return { reinterpret_cast<const byte*>(data.data()),
-            reinterpret_cast<const byte*>(data.data()) + data.size() };
-}
-
-vector<byte> stream_wrapper::toBytes(const void* data, size_t len)
-{
-    const auto byteptr = static_cast<const byte*>(data);
-    return { byteptr, byteptr + len };
-}
-
 string stream_wrapper::toString(const void* data, size_t len)
 {
     return { static_cast<const char*>(data), len };

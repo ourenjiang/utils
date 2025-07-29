@@ -26,7 +26,7 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install)
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib;")
 
 # 安装项目配置文件
-install(DIRECTORY etc DESTINATION ${CMAKE_INSTALL_PREFIX} USE_SOURCE_PERMISSIONS)
+# install(DIRECTORY etc DESTINATION ${CMAKE_INSTALL_PREFIX} USE_SOURCE_PERMISSIONS)
 
 #全局头文件路径
 include_directories(${PROJECT_SOURCE_DIR})
@@ -35,12 +35,7 @@ link_directories(${CMAKE_BINARY_DIR}/lib)
 
 # ==============================================================================
 # 第三方依赖路径：与项目路径同级
-# set(THIRD_PARTY_PATH ../third_party)
-
-# jsoncpp-1.9.5
-set(JSONCPP_PATH ${THIRD_PARTY_PATH}/jsoncpp-1.9.5)
-include_directories(${JSONCPP_PATH}/include)
-link_directories(${JSONCPP_PATH}/lib)
+set(THIRD_PARTY_PATH $ENV{HOME}/third_party)
 
 # libmodbus-3.1.10
 set(LIB_MODBUS_PATH ${THIRD_PARTY_PATH}/libmodbus-3.1.10)
@@ -97,6 +92,7 @@ include_directories(${YAMLCPP_PATH}/include)
 link_directories(${YAMLCPP_PATH}/lib)
 
 add_subdirectory(utils)
+add_subdirectory(tests)
 
 install(TARGETS utils
         RUNTIME DESTINATION bin
